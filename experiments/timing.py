@@ -4,8 +4,13 @@ Load a music file and play it. Print timing relative to the nearest beat when a 
 """
 
 import argparse
+
+from .monkey import patch
 import pyglet
 import time
+
+
+patch()
 
 
 class BeatTester:
