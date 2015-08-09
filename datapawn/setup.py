@@ -12,8 +12,6 @@ import os
 
 APP_NAME = 'datapawn'
 DESCRIPTION = open('README.txt').read()
-CHANGES = open('CHANGES.txt').read()
-TODO = open('TODO.txt').read()
 
 
 
