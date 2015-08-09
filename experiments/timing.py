@@ -64,6 +64,7 @@ class BeatTester:
         self.beat_length = 60.0 / self.beats_per_minute
         self.bar_length = self.beats_per_bar * self.beat_length
         self.win.push_handlers(self.on_key_press)
+        self.calibration_times = []
 
     def start(self):
         self.player.play()
@@ -82,6 +83,13 @@ class BeatTester:
                 nearest_beat -= self.beats_per_bar
             error = bar_position - (self.beat_length * nearest_beat)
             print("Beat {0}{1:+.3f}s ".format(nearest_beat + 1, error))
+            if symbol == pyglet.window.key.C:
+                self.calibration_times.append(music_time)
+                if len(self.calibration_times) == 2:
+                    diff = (self.calibration_times[1] - self.calibration_times[0])
+                    guess_bpm = 60.0 / diff
+                    print("Approx {0:.3f} bpm, {1:.3f}s".format(guess_bpm, diff))
+                    self.calibration_times[:1] = []
         else:
             print("Not Playing")
 
