@@ -2,6 +2,7 @@
 """
 Load a music file and play it. Print timing relative to the nearest beat when a key is pressed.
 """
+from __future__ import print_function, unicode_literals
 
 import argparse
 
@@ -13,24 +14,59 @@ import time
 patch()
 
 
+class MusicPlayer:
+    def __init__(self, filename):
+        self.filename = filename
+        self.player = pyglet.media.Player()
+
+    def play(self):
+        self.music = pyglet.media.load(self.filename, streaming=True)
+        self.player.queue(self.music)
+        self.player.play()
+
+    @property
+    def time(self):
+        return self.player.time
+
+    @property
+    def playing(self):
+        return self.player.playing
+
+
+class PyGameMusicPlayer:
+    def __init__(self, filename):
+        self.filename = filename
+        import pygame
+        self.mixer = pygame.mixer
+        if not self.mixer.get_init():
+            self.mixer.init()
+
+    def play(self):
+        self.mixer.music.load(self.filename)
+        self.mixer.music.play()
+
+    @property
+    def playing(self):
+        return self.mixer.music.get_busy()
+
+    @property
+    def time(self):
+        return self.mixer.music.get_pos() / 1000.0    # pygame is ms, pyglet is seconds
+
+
 class BeatTester:
     def __init__(self, args):
         self.win = pyglet.window.Window(400, 400)
-        self.player = pyglet.media.Player()
-        self.music = pyglet.media.load(args.music, streaming=True)
+        self.player = PyGameMusicPlayer(args.music) if args.pygame_audio else MusicPlayer(args.music)
         self.beats_per_minute = args.bpm
         self.offset_from_start = args.offset
         self.beats_per_bar = args.bar
         self.beat_length = 60.0 / self.beats_per_minute
         self.bar_length = self.beats_per_bar * self.beat_length
-        self.clock_time_start = None
         self.win.push_handlers(self.on_key_press)
 
     def start(self):
-        print(pyglet.media.get_audio_driver().__class__.__name__)
-        self.player.queue(self.music)
         self.player.play()
-        self.clock_time_start = time.time()
 
     def on_key_press(self, symbol, modifiers):
         """
@@ -56,10 +92,13 @@ def main():
     add("--bpm", type=int, default=120, help="beats per minute of music")
     add("--bar", type=int, default=4, help="beats in a bar")
     add("--offset", type=float, default=0.0, help="time to first beat in music file")
+    add("--pygame-audio", action="store_true", default=False)
     add("music", help="path to music file")
 
-    pyglet.options['audio'] = ('openal', 'pulse')
     args = ap.parse_args()
+    if args.pygame_audio:
+        import pygame
+        pygame.init()
     tester = BeatTester(args)
     tester.start()
     pyglet.app.run()

@@ -60,4 +60,4 @@ target/
 .idea/
 
 # Virtualenv
-venv/
+venv*/
