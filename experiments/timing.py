@@ -27,6 +27,7 @@ class BeatTester:
         self.win.push_handlers(self.on_key_press)
 
     def start(self):
+        print(pyglet.media.get_audio_driver().__class__.__name__)
         self.player.queue(self.music)
         self.player.play()
         self.clock_time_start = time.time()
@@ -57,6 +58,7 @@ def main():
     add("--offset", type=float, default=0.0, help="time to first beat in music file")
     add("music", help="path to music file")
 
+    pyglet.options['audio'] = ('openal', 'pulse')
     args = ap.parse_args()
     tester = BeatTester(args)
     tester.start()
