@@ -1,10 +1,11 @@
 import pyglet
-
+from datapawn.vec import vec2
 
 class Entity:
-    def __init__(self, window, pos, name=None, components=[]):
+    def __init__(self, window, pos=vec2.zero(), rot=0.0, name=None, components=[]):
         self.window = window
-        self.pos = pos
+        self.pos = vec2(*pos)
+        self.rot = rot
         self.name = name
         self.components = components
         for c in components:
@@ -25,7 +26,8 @@ class Drawable(Component):
         self.sprite = pyglet.sprite.Sprite(img, batch=batch)
 
     def on_tick(self, dt):
-        self.sprite.set_position(*self.entity.pos)
+        self.sprite.position = self.entity.pos
+        self.sprite.rotation = self.entity.rot
 
 class Datapawn(Component):
     def __init__(self):
@@ -34,7 +36,7 @@ class Datapawn(Component):
 
     def on_drum_command(self, command):
         if command == ["D", "D", "D", "1"]:
-            self.dest = self.entity.pos[0] + 100
+            self.dest = self.entity.pos[0] + 150.0
 
     def on_tick(self, dt):
         if self.dest is not None:
@@ -43,4 +45,4 @@ class Datapawn(Component):
             newx = x + dx
             if (x < self.dest < newx) or (newx < self.dest < x):
                 self.dest = None
-            self.entity.pos = (newx, y)
+            self.entity.pos = vec2(newx, y)
