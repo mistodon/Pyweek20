@@ -61,3 +61,8 @@ target/
 
 # Virtualenv
 venv*/
+
+# Musescore backups
+*.mscz,
+*.mscx,
+
