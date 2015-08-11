@@ -1,11 +1,8 @@
 Pyweek20
 ========
-Entry for Pyweek 20. Theme yet to be announced.
+Entry for Pyweek 20. Theme is "Data data data".
 
-Possibilities are:
+Our game is: Datapawn.
 
-1.  Is it poison?
-2.  Purification
-3.  Sheer bloody panic
-4.  Discombobulation
-5.  Data data data
+The Datapawns are a tribe of robots sent on a spiritual mission to ruin videogames or something.
+They are controlled by drummed rhythmic commands.
