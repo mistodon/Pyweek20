@@ -4,8 +4,10 @@ Monkey-patching defects in libraries AGAIN
 
 
 def patch():
-
-    from pyglet.media.drivers.openal import OpenALDriver
+    try:
+        from pyglet.media.drivers.openal import OpenALDriver
+    except ImportError:
+        return
 
     def fix_openal_get_extensions(self):
         extensions = alc.alcGetString(self._device, alc.ALC_EXTENSIONS)
