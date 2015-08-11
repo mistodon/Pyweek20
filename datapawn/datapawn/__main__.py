@@ -1,3 +1,6 @@
+import pyglet
+from datapawn.gamescreen import GameScreen
 
 def main():
-    """ your app starts here """
+    gs = GameScreen()
+    pyglet.app.run()
