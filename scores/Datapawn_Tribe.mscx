@@ -1,0 +1,3526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<museScore version="2.06">
+  <programVersion>2.0.2</programVersion>
+  <programRevision>f51dc11</programRevision>
+  <Score>
+    <LayerTag id="0" tag="default"></LayerTag>
+    <currentLayer>0</currentLayer>
+    <Synthesizer>
+      </Synthesizer>
+    <Division>480</Division>
+    <Style>
+      <page-layout>
+        <page-height>1683.36</page-height>
+        <page-width>1190.88</page-width>
+        <page-margins type="even">
+          <left-margin>56.6929</left-margin>
+          <right-margin>56.6929</right-margin>
+          <top-margin>56.6929</top-margin>
+          <bottom-margin>113.386</bottom-margin>
+          </page-margins>
+        <page-margins type="odd">
+          <left-margin>56.6929</left-margin>
+          <right-margin>56.6929</right-margin>
+          <top-margin>56.6929</top-margin>
+          <bottom-margin>113.386</bottom-margin>
+          </page-margins>
+        </page-layout>
+      <Spatium>1.76389</Spatium>
+      </Style>
+    <showInvisible>1</showInvisible>
+    <showUnprintable>1</showUnprintable>
+    <showFrames>1</showFrames>
+    <showMargins>0</showMargins>
+    <metaTag name="arranger"></metaTag>
+    <metaTag name="composer">scav</metaTag>
+    <metaTag name="copyright">Peter ***Lastname***</metaTag>
+    <metaTag name="creationDate">2015-08-10</metaTag>
+    <metaTag name="lyricist"></metaTag>
+    <metaTag name="movementNumber"></metaTag>
+    <metaTag name="movementTitle"></metaTag>
+    <metaTag name="platform">Apple Macintosh</metaTag>
+    <metaTag name="poet"></metaTag>
+    <metaTag name="source"></metaTag>
+    <metaTag name="translator"></metaTag>
+    <metaTag name="workNumber"></metaTag>
+    <metaTag name="workTitle">Datapawn Tribe</metaTag>
+    <PageList>
+      <Page>
+        <System>
+          </System>
+        <System>
+          </System>
+        <System>
+          </System>
+        <System>
+          </System>
+        </Page>
+      <Page>
+        <System>
+          </System>
+        <System>
+          </System>
+        <System>
+          </System>
+        </Page>
+      <Page>
+        <System>
+          </System>
+        <System>
+          </System>
+        </Page>
+      </PageList>
+    <Part>
+      <Staff id="1">
+        <StaffType group="pitched">
+          <name>stdNormal</name>
+          </StaffType>
+        <bracket type="-1" span="0"/>
+        </Staff>
+      <trackName>Bagpipe</trackName>
+      <Instrument>
+        <longName>Bagpipe</longName>
+        <shortName>Bagp.</shortName>
+        <trackName>Bagpipe</trackName>
+        <minPitchP>67</minPitchP>
+        <maxPitchP>81</maxPitchP>
+        <minPitchA>67</minPitchA>
+        <maxPitchA>81</maxPitchA>
+        <transposeDiatonic>-1</transposeDiatonic>
+        <transposeChromatic>-2</transposeChromatic>
+        <instrumentId>wind.pipes.bagpipes</instrumentId>
+        <Articulation>
+          <velocity>100</velocity>
+          <gateTime>100</gateTime>
+          </Articulation>
+        <Articulation name="staccatissimo">
+          <velocity>100</velocity>
+          <gateTime>33</gateTime>
+          </Articulation>
+        <Articulation name="staccato">
+          <velocity>100</velocity>
+          <gateTime>50</gateTime>
+          </Articulation>
+        <Articulation name="portato">
+          <velocity>100</velocity>
+          <gateTime>67</gateTime>
+          </Articulation>
+        <Articulation name="tenuto">
+          <velocity>100</velocity>
+          <gateTime>100</gateTime>
+          </Articulation>
+        <Articulation name="marcato">
+          <velocity>120</velocity>
+          <gateTime>67</gateTime>
+          </Articulation>
+        <Articulation name="sforzato">
+          <velocity>120</velocity>
+          <gateTime>100</gateTime>
+          </Articulation>
+        <Channel>
+          <program value="109"/>
+          <synti>Fluid</synti>
+          </Channel>
+        </Instrument>
+      </Part>
+    <Part>
+      <Staff id="2">
+        <StaffType group="percussion">
+          <name>perc1Line</name>
+          <lines>1</lines>
+          <keysig>0</keysig>
+          </StaffType>
+        <defaultClef>PERC</defaultClef>
+        <bracket type="-1" span="0"/>
+        </Staff>
+      <trackName>Bass Drum</trackName>
+      <Instrument>
+        <longName>Bass Drum</longName>
+        <shortName>B. Dr.</shortName>
+        <trackName>Bass Drum</trackName>
+        <instrumentId>drum.bass-drum</instrumentId>
+        <useDrumset>1</useDrumset>
+        <Drum pitch="35">
+          <head>0</head>
+          <line>0</line>
+          <voice>0</voice>
+          <name>Acoustic Bass Drum</name>
+          <stem>2</stem>
+          <shortcut>A</shortcut>
+          </Drum>
+        <clef>PERC</clef>
+        <Articulation>
+          <velocity>100</velocity>
+          <gateTime>100</gateTime>
+          </Articulation>
+        <Articulation name="staccatissimo">
+          <velocity>100</velocity>
+          <gateTime>33</gateTime>
+          </Articulation>
+        <Articulation name="staccato">
+          <velocity>100</velocity>
+          <gateTime>50</gateTime>
+          </Articulation>
+        <Articulation name="portato">
+          <velocity>100</velocity>
+          <gateTime>67</gateTime>
+          </Articulation>
+        <Articulation name="tenuto">
+          <velocity>100</velocity>
+          <gateTime>100</gateTime>
+          </Articulation>
+        <Articulation name="marcato">
+          <velocity>120</velocity>
+          <gateTime>67</gateTime>
+          </Articulation>
+        <Articulation name="sforzato">
+          <velocity>120</velocity>
+          <gateTime>100</gateTime>
+          </Articulation>
+        <Channel>
+          <controller ctrl="0" value="1"/>
+          <program value="0"/>
+          <synti>Fluid</synti>
+          </Channel>
+        </Instrument>
+      </Part>
+    <Part>
+      <Staff id="3">
+        <StaffType group="percussion">
+          <name>perc1Line</name>
+          <lines>1</lines>
+          <keysig>0</keysig>
+          </StaffType>
+        <defaultClef>PERC</defaultClef>
+        <bracket type="-1" span="0"/>
+        </Staff>
+      <trackName>Wood Blocks</trackName>
+      <Instrument>
+        <longName>Wood Blocks</longName>
+        <shortName>Wd. Bl.</shortName>
+        <trackName>Wood Blocks</trackName>
+        <instrumentId>wood.wood.block</instrumentId>
+        <useDrumset>1</useDrumset>
+        <Drum pitch="76">
+          <head>0</head>
+          <line>-1</line>
+          <voice>0</voice>
+          <name>High Wood Block</name>
+          <stem>1</stem>
+          <shortcut>A</shortcut>
+          </Drum>
+        <Drum pitch="77">
+          <head>0</head>
+          <line>1</line>
+          <voice>0</voice>
+          <name>Low Wood Block</name>
+          <stem>1</stem>
+          <shortcut>B</shortcut>
+          </Drum>
+        <clef>PERC</clef>
+        <Articulation>
+          <velocity>100</velocity>
+          <gateTime>100</gateTime>
+          </Articulation>
+        <Articulation name="staccatissimo">
+          <velocity>100</velocity>
+          <gateTime>33</gateTime>
+          </Articulation>
+        <Articulation name="staccato">
+          <velocity>100</velocity>
+          <gateTime>50</gateTime>
+          </Articulation>
+        <Articulation name="portato">
+          <velocity>100</velocity>
+          <gateTime>67</gateTime>
+          </Articulation>
+        <Articulation name="tenuto">
+          <velocity>100</velocity>
+          <gateTime>100</gateTime>
+          </Articulation>
+        <Articulation name="marcato">
+          <velocity>120</velocity>
+          <gateTime>67</gateTime>
+          </Articulation>
+        <Articulation name="sforzato">
+          <velocity>120</velocity>
+          <gateTime>100</gateTime>
+          </Articulation>
+        <Channel>
+          <controller ctrl="0" value="1"/>
+          <program value="0"/>
+          <synti>Fluid</synti>
+          </Channel>
+        </Instrument>
+      </Part>
+    <Part>
+      <Staff id="4">
+        <StaffType group="percussion">
+          <name>perc1Line</name>
+          <lines>1</lines>
+          <keysig>0</keysig>
+          </StaffType>
+        <defaultClef>PERC</defaultClef>
+        <bracket type="-1" span="0"/>
+        </Staff>
+      <trackName>Tambourine</trackName>
+      <Instrument>
+        <longName>Tambourine</longName>
+        <shortName>Tamb.</shortName>
+        <trackName>Tambourine</trackName>
+        <instrumentId>drum.tambourine</instrumentId>
+        <useDrumset>1</useDrumset>
+        <Drum pitch="54">
+          <head>0</head>
+          <line>0</line>
+          <voice>0</voice>
+          <name>Tambourine</name>
+          <stem>2</stem>
+          <shortcut>A</shortcut>
+          </Drum>
+        <clef>PERC</clef>
+        <Articulation>
+          <velocity>100</velocity>
+          <gateTime>100</gateTime>
+          </Articulation>
+        <Articulation name="staccatissimo">
+          <velocity>100</velocity>
+          <gateTime>33</gateTime>
+          </Articulation>
+        <Articulation name="staccato">
+          <velocity>100</velocity>
+          <gateTime>50</gateTime>
+          </Articulation>
+        <Articulation name="portato">
+          <velocity>100</velocity>
+          <gateTime>67</gateTime>
+          </Articulation>
+        <Articulation name="tenuto">
+          <velocity>100</velocity>
+          <gateTime>100</gateTime>
+          </Articulation>
+        <Articulation name="marcato">
+          <velocity>120</velocity>
+          <gateTime>67</gateTime>
+          </Articulation>
+        <Articulation name="sforzato">
+          <velocity>120</velocity>
+          <gateTime>100</gateTime>
+          </Articulation>
+        <Channel>
+          <controller ctrl="0" value="1"/>
+          <program value="0"/>
+          <synti>Fluid</synti>
+          </Channel>
+        </Instrument>
+      </Part>
+    <Staff id="1">
+      <VBox>
+        <height>10</height>
+        <Text>
+          <style>Title</style>
+          <text>Datapawn Tribe</text>
+          </Text>
+        <Text>
+          <style>Composer</style>
+          <text>scav</text>
+          </Text>
+        </VBox>
+      <Measure number="1">
+        <KeySig>
+          <accidental>2</accidental>
+          </KeySig>
+        <TimeSig>
+          <sigN>4</sigN>
+          <sigD>4</sigD>
+          <showCourtesySig>1</showCourtesySig>
+          </TimeSig>
+        <Tempo>
+          <tempo>2</tempo>
+          <followText>1</followText>
+          <text><sym>unicodeNoteQuarterUp</sym> = 120</text>
+          </Tempo>
+        <Chord>
+          <durationType>eighth</durationType>
+          <acciaccatura/>
+          <Note>
+            <pitch>72</pitch>
+            <tpc>14</tpc>
+            <tpc2>16</tpc2>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>whole</durationType>
+          <Note>
+            <Tie id="2">
+              </Tie>
+            <pitch>71</pitch>
+            <tpc>19</tpc>
+            <tpc2>21</tpc2>
+            </Note>
+          </Chord>
+        </Measure>
+      <Measure number="2">
+        <Chord>
+          <durationType>whole</durationType>
+          <Note>
+            <endSpanner id="2"/>
+            <pitch>71</pitch>
+            <tpc>19</tpc>
+            <tpc2>21</tpc2>
+            </Note>
+          </Chord>
+        </Measure>
+      <Measure number="3">
+        <Chord>
+          <durationType>eighth</durationType>
+          <acciaccatura/>
+          <Note>
+            <pitch>81</pitch>
+            <tpc>17</tpc>
+            <tpc2>19</tpc2>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <Articulation>
+            <subtype>trill</subtype>
+            </Articulation>
+          <Note>
+            <pitch>83</pitch>
+            <tpc>19</tpc>
+            <tpc2>21</tpc2>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>16th</durationType>
+          </Rest>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        <Rest>
+          <durationType>quarter</durationType>
+          </Rest>
+        <Rest>
+          <durationType>half</durationType>
+          </Rest>
+        </Measure>
+      <Measure number="4">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="5">
+        <Chord>
+          <durationType>whole</durationType>
+          <Note>
+            <Tie id="3">
+              </Tie>
+            <pitch>71</pitch>
+            <tpc>19</tpc>
+            <tpc2>21</tpc2>
+            </Note>
+          </Chord>
+        </Measure>
+      <Measure number="6">
+        <Chord>
+          <durationType>whole</durationType>
+          <Note>
+            <endSpanner id="3"/>
+            <pitch>71</pitch>
+            <tpc>19</tpc>
+            <tpc2>21</tpc2>
+            </Note>
+          </Chord>
+        </Measure>
+      <Measure number="7">
+        <Chord>
+          <durationType>32nd</durationType>
+          <Note>
+            <pitch>83</pitch>
+            <tpc>19</tpc>
+            <tpc2>21</tpc2>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>32nd</durationType>
+          <Note>
+            <Accidental>
+              <subtype>sharp</subtype>
+              </Accidental>
+            <pitch>85</pitch>
+            <tpc>21</tpc>
+            <tpc2>23</tpc2>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>32nd</durationType>
+          <Note>
+            <pitch>83</pitch>
+            <tpc>19</tpc>
+            <tpc2>21</tpc2>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>32nd</durationType>
+          <Note>
+            <Accidental>
+              <subtype>natural</subtype>
+              </Accidental>
+            <pitch>84</pitch>
+            <tpc>14</tpc>
+            <tpc2>16</tpc2>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>32nd</durationType>
+          <Note>
+            <Accidental>
+              <subtype>sharp</subtype>
+              </Accidental>
+            <pitch>82</pitch>
+            <tpc>24</tpc>
+            <tpc2>26</tpc2>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>32nd</durationType>
+          <Note>
+            <pitch>83</pitch>
+            <tpc>19</tpc>
+            <tpc2>21</tpc2>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>16th</durationType>
+          </Rest>
+        <Rest>
+          <durationType>quarter</durationType>
+          </Rest>
+        <Rest>
+          <durationType>half</durationType>
+          </Rest>
+        </Measure>
+      <Measure number="8">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="9">
+        <Chord>
+          <durationType>whole</durationType>
+          <Note>
+            <Tie id="4">
+              </Tie>
+            <pitch>71</pitch>
+            <tpc>19</tpc>
+            <tpc2>21</tpc2>
+            </Note>
+          </Chord>
+        </Measure>
+      <Measure number="10">
+        <Chord>
+          <durationType>whole</durationType>
+          <Note>
+            <endSpanner id="4"/>
+            <pitch>71</pitch>
+            <tpc>19</tpc>
+            <tpc2>21</tpc2>
+            </Note>
+          </Chord>
+        </Measure>
+      <Measure number="11">
+        <Chord>
+          <durationType>eighth</durationType>
+          <acciaccatura/>
+          <Note>
+            <pitch>81</pitch>
+            <tpc>17</tpc>
+            <tpc2>19</tpc2>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <Articulation>
+            <subtype>trill</subtype>
+            </Articulation>
+          <Note>
+            <pitch>83</pitch>
+            <tpc>19</tpc>
+            <tpc2>21</tpc2>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>16th</durationType>
+          </Rest>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        <Rest>
+          <durationType>quarter</durationType>
+          </Rest>
+        <Rest>
+          <durationType>half</durationType>
+          </Rest>
+        </Measure>
+      <Measure number="12">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="13">
+        <Slur id="5">
+          <track>0</track>
+          </Slur>
+        <Chord>
+          <durationType>eighth</durationType>
+          <acciaccatura/>
+          <Note>
+            <pitch>72</pitch>
+            <tpc>14</tpc>
+            <tpc2>16</tpc2>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>whole</durationType>
+          <Slur type="start" id="5"/>
+          <Note>
+            <pitch>71</pitch>
+            <tpc>19</tpc>
+            <tpc2>21</tpc2>
+            </Note>
+          </Chord>
+        </Measure>
+      <Measure number="14">
+        <Chord>
+          <durationType>eighth</durationType>
+          <acciaccatura/>
+          <Note>
+            <Accidental>
+              <subtype>natural</subtype>
+              </Accidental>
+            <pitch>70</pitch>
+            <tpc>12</tpc>
+            <tpc2>14</tpc2>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>whole</durationType>
+          <Slur type="stop" id="5"/>
+          <Note>
+            <Accidental>
+              <subtype>sharp</subtype>
+              </Accidental>
+            <pitch>71</pitch>
+            <tpc>19</tpc>
+            <tpc2>21</tpc2>
+            </Note>
+          </Chord>
+        </Measure>
+      <Measure number="15">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="16">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="17">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="18">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="19">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="20">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="21">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="22">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="23">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="24">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="25">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="26">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="27">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="28">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="29">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="30">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="31">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="32">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="33">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="34">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="35">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="36">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="37">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="38">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="39">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="40">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="41">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="42">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="43">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="44">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="45">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="46">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="47">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="48">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="49">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="50">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="51">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="52">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="53">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="54">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="55">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="56">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="57">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="58">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="59">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="60">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="61">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="62">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="63">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="64">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        <BarLine>
+          <subtype>end</subtype>
+          <span>1</span>
+          </BarLine>
+        </Measure>
+      </Staff>
+    <Staff id="2">
+      <Measure number="1">
+        <TimeSig>
+          <sigN>4</sigN>
+          <sigD>4</sigD>
+          <showCourtesySig>1</showCourtesySig>
+          </TimeSig>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>quarter</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        </Measure>
+      <Measure number="2">
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>quarter</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        </Measure>
+      <Measure number="3">
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>quarter</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        </Measure>
+      <Measure number="4">
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>quarter</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        </Measure>
+      <Measure number="5">
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>quarter</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        </Measure>
+      <Measure number="6">
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>quarter</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        </Measure>
+      <Measure number="7">
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>quarter</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        </Measure>
+      <Measure number="8">
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>quarter</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        </Measure>
+      <Measure number="9">
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>quarter</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        </Measure>
+      <Measure number="10">
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>quarter</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        </Measure>
+      <Measure number="11">
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>quarter</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        </Measure>
+      <Measure number="12">
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        </Measure>
+      <Measure number="13">
+        <Chord>
+          <durationType>quarter</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>quarter</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>quarter</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>quarter</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        </Measure>
+      <Measure number="14">
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>16th</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>35</pitch>
+            <tpc>19</tpc>
+            </Note>
+          </Chord>
+        </Measure>
+      <Measure number="15">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="16">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="17">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="18">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="19">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="20">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="21">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="22">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="23">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="24">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="25">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="26">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="27">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="28">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="29">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="30">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="31">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="32">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="33">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="34">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="35">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="36">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="37">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="38">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="39">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="40">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="41">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="42">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="43">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="44">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="45">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="46">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="47">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="48">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="49">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="50">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="51">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="52">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="53">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="54">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="55">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="56">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="57">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="58">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="59">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="60">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="61">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="62">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="63">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="64">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        <BarLine>
+          <subtype>end</subtype>
+          <span>1</span>
+          </BarLine>
+        </Measure>
+      </Staff>
+    <Staff id="3">
+      <Measure number="1">
+        <TimeSig>
+          <sigN>4</sigN>
+          <sigD>4</sigD>
+          <showCourtesySig>1</showCourtesySig>
+          </TimeSig>
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="2">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="3">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="4">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="5">
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        <Rest>
+          <durationType>half</durationType>
+          </Rest>
+        </Measure>
+      <Measure number="6">
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        <Rest>
+          <durationType>half</durationType>
+          </Rest>
+        </Measure>
+      <Measure number="7">
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        <Rest>
+          <durationType>half</durationType>
+          </Rest>
+        </Measure>
+      <Measure number="8">
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        </Measure>
+      <Measure number="9">
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        <Rest>
+          <durationType>half</durationType>
+          </Rest>
+        </Measure>
+      <Measure number="10">
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        <Rest>
+          <durationType>half</durationType>
+          </Rest>
+        </Measure>
+      <Measure number="11">
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        <Rest>
+          <durationType>half</durationType>
+          </Rest>
+        </Measure>
+      <Measure number="12">
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        <Rest>
+          <durationType>half</durationType>
+          </Rest>
+        </Measure>
+      <Measure number="13">
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>quarter</durationType>
+          </Rest>
+        </Measure>
+      <Measure number="14">
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>up</StemDirection>
+          <Note>
+            <pitch>76</pitch>
+            <tpc>18</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>quarter</durationType>
+          </Rest>
+        </Measure>
+      <Measure number="15">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="16">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="17">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="18">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="19">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="20">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="21">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="22">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="23">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="24">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="25">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="26">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="27">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="28">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="29">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="30">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="31">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="32">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="33">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="34">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="35">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="36">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="37">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="38">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="39">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="40">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="41">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="42">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="43">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="44">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="45">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="46">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="47">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="48">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="49">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="50">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="51">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="52">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="53">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="54">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="55">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="56">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="57">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="58">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="59">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="60">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="61">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="62">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="63">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="64">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        <BarLine>
+          <subtype>end</subtype>
+          <span>1</span>
+          </BarLine>
+        </Measure>
+      </Staff>
+    <Staff id="4">
+      <Measure number="1">
+        <TimeSig>
+          <sigN>4</sigN>
+          <sigD>4</sigD>
+          <showCourtesySig>1</showCourtesySig>
+          </TimeSig>
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="2">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="3">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="4">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="5">
+        <Rest>
+          <offset x="2.34033" y="12.7192"/>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="6">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="7">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="8">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="9">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="10">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="11">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="12">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="13">
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>54</pitch>
+            <tpc>20</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>54</pitch>
+            <tpc>20</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>54</pitch>
+            <tpc>20</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>54</pitch>
+            <tpc>20</tpc>
+            </Note>
+          </Chord>
+        <Rest>
+          <durationType>eighth</durationType>
+          </Rest>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>54</pitch>
+            <tpc>20</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>54</pitch>
+            <tpc>20</tpc>
+            </Note>
+          </Chord>
+        </Measure>
+      <Measure number="14">
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>54</pitch>
+            <tpc>20</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>54</pitch>
+            <tpc>20</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>54</pitch>
+            <tpc>20</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>54</pitch>
+            <tpc>20</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>54</pitch>
+            <tpc>20</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>54</pitch>
+            <tpc>20</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>54</pitch>
+            <tpc>20</tpc>
+            </Note>
+          </Chord>
+        <Chord>
+          <durationType>eighth</durationType>
+          <StemDirection>down</StemDirection>
+          <Note>
+            <pitch>54</pitch>
+            <tpc>20</tpc>
+            </Note>
+          </Chord>
+        </Measure>
+      <Measure number="15">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="16">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="17">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="18">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="19">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="20">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="21">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="22">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="23">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="24">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="25">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="26">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="27">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="28">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="29">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="30">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="31">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="32">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="33">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="34">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="35">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="36">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="37">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="38">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="39">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="40">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="41">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="42">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="43">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="44">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="45">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="46">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="47">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="48">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="49">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="50">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="51">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="52">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="53">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="54">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="55">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="56">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="57">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="58">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="59">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="60">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="61">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="62">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="63">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        </Measure>
+      <Measure number="64">
+        <Rest>
+          <durationType>measure</durationType>
+          <duration z="4" n="4"/>
+          </Rest>
+        <BarLine>
+          <subtype>end</subtype>
+          <span>1</span>
+          </BarLine>
+        </Measure>
+      </Staff>
+    </Score>
+  </museScore>
