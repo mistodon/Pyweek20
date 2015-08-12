@@ -7,6 +7,7 @@ Enhancing this to handle caching etc. is left as an exercise for the reader.
 Note that pyglet users should probably just add the data directory to the
 pyglet.resource search path.
 """
+from __future__ import print_function, unicode_literals
 
 import os
 

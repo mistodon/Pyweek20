@@ -1,11 +1,13 @@
+from __future__ import print_function, unicode_literals
+
 import pyglet
 import pyglet.gl as gl
 from pyglet.window import key
 
 from math import fmod
 
-from datapawn.entity import Entity, Drawable, Datapawn
-from datapawn.music import BeatClock
+from .entity import Entity, Drawable, Datapawn
+from .music import BeatClock
 
 CONTROLS = {
     key.UP: "D",
@@ -51,7 +53,7 @@ class GameScreen(pyglet.window.Window):
             print("{0}  {1}".format(error, status))
             self.command.append(sym)
             if len(self.command) == 4:
-                self.dispatch_event("on_drum_command", self.command)
+                self.dispatch_event("on_drum_command", ''.join(self.command))
                 self.command = []
 
     def tick(self, dt):

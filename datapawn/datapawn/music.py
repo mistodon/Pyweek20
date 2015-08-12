@@ -3,7 +3,7 @@ import pyglet
 from math import floor
 
 # Change this to some music you actually have.
-TRACK = "Smashdance.wav"
+TRACK = "moonlight.mp3"
 
 class MusicPlayer:
     def __init__(self, filename):
