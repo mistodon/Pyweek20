@@ -109,6 +109,9 @@ class GameScreen(pyglet.window.Window):
         bar = self.current_bar
         playable = self.this_bar_playable
 
+        if bar < 2:
+            return
+
         b = 10 - 8*error
         if not playable:
             b //= 2
@@ -119,7 +122,7 @@ class GameScreen(pyglet.window.Window):
             )
         if playable:
             colors = (1,1,1)*10
-        elif beat == self.beatclock.beats_per_bar - 1 and bar >= 1:
+        elif beat == self.beatclock.beats_per_bar - 1 and bar >= 2:
             colors = (1.0,1.0,0.8)*10
         else:
             colors = (0.6,0.6,0.6)*10
@@ -127,12 +130,12 @@ class GameScreen(pyglet.window.Window):
             ("v2f", vertices), ("c3f", colors))
 
     def end_game(self, message="Victory!"):
-        print(message)s
+        print(message)
         pyglet.app.quit()
 
     @property
     def current_beat(self):
-        return int(self.clock / self.beatclock.bar_length) % self.beatclock.beats_per_bar
+        return int(self.clock / self.beatclock.beat_length) % self.beatclock.beats_per_bar
 
     @property
     def current_bar(self):
