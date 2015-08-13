@@ -21,7 +21,7 @@ class GameScreen(pyglet.window.Window):
     GROUND_Y = 100
 
     def __init__(self):
-        super().__init__(800, 450)
+        super(GameScreen, self).__init__(800, 450)
         gl.glClearColor(0.5,0.85,1.0,1.0)
         self.batch = pyglet.graphics.Batch()
         self.named_entities = {}
@@ -56,7 +56,7 @@ class GameScreen(pyglet.window.Window):
         self.dispatch_event("on_start")
 
     def on_key_press(self, symbol, modifiers):
-        super().on_key_press(symbol, modifiers)
+        super(GameScreen, self).on_key_press(symbol, modifiers)
         sym = CONTROLS.get(symbol)
         if sym:
             beat,error = self.beatclock.get_beat()
@@ -130,7 +130,7 @@ class GameScreen(pyglet.window.Window):
             ("v2f", vertices), ("c3f", colors))
 
     def end_game(self, message="Victory!"):
-        print(message)s
+        print(message)
         pyglet.app.quit()
 
     @property
