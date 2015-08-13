@@ -157,9 +157,13 @@ class SpiritOfTheDrums(Component):
 
 
 class DrawableText(Component):
-    def __init__(self, **kwargs):
+    def __init__(self, world=False, **kwargs):
         super(DrawableText, self).__init__()
+        self.world = world
+        self.x = kwargs['x']
         self.label = pyglet.text.Label(**kwargs)
 
     def on_draw(self):
+        if self.world:
+            self.label.x = self.x + Camera.active.offset.x
         self.label.draw()

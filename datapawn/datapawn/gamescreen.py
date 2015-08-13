@@ -6,7 +6,7 @@ from pyglet.window import key
 
 from math import fmod
 
-from .entity import Entity, Drawable, Datapawn, SpiritOfTheDrums, Camera
+from .entity import Entity, Drawable, Datapawn, SpiritOfTheDrums, Camera, DrawableText
 from .music import BeatClock
 
 CONTROLS = {
@@ -21,7 +21,7 @@ class GameScreen(pyglet.window.Window):
     GROUND_Y = 100
 
     def __init__(self):
-        super().__init__(800, 450)
+        super(GameScreen, self).__init__(800, 450)
         gl.glClearColor(0.5,0.85,1.0,1.0)
         self.batch = pyglet.graphics.Batch()
         self.named_entities = {}
@@ -41,6 +41,9 @@ class GameScreen(pyglet.window.Window):
             robot(50),
             robot(80),
             Entity(self, (0,0), name="Spirit of the Drums", components=[SpiritOfTheDrums()]),
+            Entity(self, (200, 200), name="Ground Text", components=[
+                DrawableText(world=True, x=200, y=200, text="This is a test", font_size=80)
+            ])
             ]
         for e in self.entities:
             if e.name:
@@ -53,7 +56,7 @@ class GameScreen(pyglet.window.Window):
         self.dispatch_event("on_start")
 
     def on_key_press(self, symbol, modifiers):
-        super().on_key_press(symbol, modifiers)
+        super(GameScreen, self).on_key_press(symbol, modifiers)
         sym = CONTROLS.get(symbol)
         if sym:
             beat,error = self.beatclock.get_beat()
