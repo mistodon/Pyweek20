@@ -74,7 +74,7 @@ class GameScreen(pyglet.window.Window):
 
     def tick(self, dt):
         self.clock += dt
-        if self.frames == 10:
+        if self.frames % 60 == 0:
             self.clock = self.beatclock.player.time
         self.frames += 1
         self.dispatch_event("on_tick", dt)
@@ -106,29 +106,47 @@ class GameScreen(pyglet.window.Window):
             ("v2f", groundstrip), ("c3f", colors))
 
     def draw_beat(self):
-        if (self.frames < 11):
-            return
-
         blength = self.beatclock.beat_length
         error = fmod(self.clock, blength) / blength
-        beat = int(self.clock / blength)
-        bar = self.clock / self.beatclock.bar_length
-        playable = (bar % 2) == 1
+        beat = self.current_beat
+        bar = self.current_bar
+        playable = self.this_bar_playable
 
         b = 10 - 8*error
+        if not playable:
+            b //= 2
         vertices = (
             0, 0,   b, b,   0, 450,   b, 450-b,
             800, 450,   800-b, 450-b,
             800, 0,   800-b, b,   0, 0,   b, b
             )
-        colors = (0.8,1,0.8)*10
+        if playable:
+            colors = (1,1,1)*10
+        elif beat == self.beatclock.beats_per_bar - 1 and bar >= 1:
+            colors = (1.0,1.0,0.8)*10
+        else:
+            colors = (0.6,0.6,0.6)*10
         pyglet.graphics.draw(10, pyglet.gl.GL_QUAD_STRIP,
             ("v2f", vertices), ("c3f", colors))
 
     def end_game(self, message="Victory!"):
-        print(message)
+        print(message)s
         pyglet.app.quit()
 
+    @property
+    def current_beat(self):
+        return int(self.clock / self.beatclock.bar_length) % self.beatclock.beats_per_bar
+
+    @property
+    def current_bar(self):
+        return int(self.clock / self.beatclock.bar_length)
+
+    @property
+    def this_bar_playable(self):
+        bar = self.current_bar
+        if bar < 3:
+            return False
+        return (self.current_bar % 2) == 1
 
 GameScreen.register_event_type("on_tick")
 GameScreen.register_event_type("on_start")
