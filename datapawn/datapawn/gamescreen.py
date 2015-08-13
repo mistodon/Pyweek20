@@ -25,6 +25,8 @@ class GameScreen(pyglet.window.Window):
         gl.glClearColor(0.5,0.85,1.0,1.0)
         self.batch = pyglet.graphics.Batch()
         self.named_entities = {}
+        self.clock = 0.0
+        self.frames = 0
 
         def robot(x):
             return Entity(self, (x, self.GROUND_Y), components=[
@@ -68,6 +70,10 @@ class GameScreen(pyglet.window.Window):
                 self.command = []
 
     def tick(self, dt):
+        self.clock += dt
+        if self.frames == 10:
+            self.clock = self.beatclock.player.time
+        self.frames += 1
         self.dispatch_event("on_tick", dt)
 
     def on_draw(self):
@@ -97,14 +103,22 @@ class GameScreen(pyglet.window.Window):
             ("v2f", groundstrip), ("c3f", colors))
 
     def draw_beat(self):
-        beat,error = self.beatclock.get_beat(round_down=True)
-        b = 10 - 15*error
+        if (self.frames < 11):
+            return
+
+        blength = self.beatclock.beat_length
+        error = fmod(self.clock, blength) / blength
+        beat = int(self.clock / blength)
+        bar = self.clock / self.beatclock.bar_length
+        playable = (bar % 2) == 1
+
+        b = 10 - 8*error
         vertices = (
             0, 0,   b, b,   0, 450,   b, 450-b,
             800, 450,   800-b, 450-b,
             800, 0,   800-b, b,   0, 0,   b, b
             )
-        colors = (1,1,1)*10
+        colors = (0.8,1,0.8)*10
         pyglet.graphics.draw(10, pyglet.gl.GL_QUAD_STRIP,
             ("v2f", vertices), ("c3f", colors))
 
