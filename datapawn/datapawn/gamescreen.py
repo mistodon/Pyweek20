@@ -6,7 +6,7 @@ from pyglet.window import key
 
 from math import fmod
 
-from .entity import Entity, Drawable, Datapawn
+from .entity import Entity, Drawable, Datapawn, SpiritOfTheDrums
 from .music import BeatClock
 
 CONTROLS = {
@@ -15,6 +15,7 @@ CONTROLS = {
     key.LEFT: "-",
     key.RIGHT: "1",
 }
+
 
 class GameScreen(pyglet.window.Window):
     GROUND_Y = 100
@@ -29,7 +30,8 @@ class GameScreen(pyglet.window.Window):
             Entity(self, (10, self.GROUND_Y), name="Robot0", components=[
                 Drawable(image="datapawn.png", batch=self.batch),
                 Datapawn()
-                ])
+                ]),
+            Entity(self, (0,0), name="Spirit of the Drums", components=[SpiritOfTheDrums()]),
             ]
         for e in self.entities:
             if e.name:

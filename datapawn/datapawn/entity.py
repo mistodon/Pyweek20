@@ -15,6 +15,7 @@ class Entity:
         for c in components:
             c.attach(self)
 
+
 class Component():
     def __init__(self):
         self.entity = None
@@ -22,6 +23,7 @@ class Component():
     def attach(self, entity):
         self.entity = entity
         entity.window.push_handlers(self)
+
 
 class Drawable(Component):
     def __init__(self, image, batch=None):
@@ -35,19 +37,17 @@ class Drawable(Component):
 
 
 class Datapawn(Component):
-    population = []
-    selected_leader = None
+    population = []     # leader is population[0]
 
     def __init__(self):
         super().__init__()
         self.dest = None
-        self.selected = False
         self.emplaced = False
         Datapawn.population.append(self)
 
     def on_drum_command(self, command):
         # resolve scope
-        if command[0] == "1" and not self.selected:
+        if command[0] == "1" and not self.is_the_leader:
             return
         # act on command if scope includes me
         action = command[1:]
@@ -63,30 +63,33 @@ class Datapawn(Component):
                 self.dest = None
             self.entity.pos = vec2(newx, y)
 
+    @property
+    def is_the_leader(self):
+        return Datapawn.population[0] is self
+
     def die(self):
         try:
             Datapawn.population.remove(self)
-            if Datapawn.selected_leader is self:
-                Datapawn.selected_leader = None
         except ValueError:
             pass
 
     @staticmethod
-    def select_a_leader():
-        old_leader = Datapawn.selected_leader
-        new_leader = None
-        if old_leader:
-            old_leader.selected = False # maybe remove leader component?
-        population = Datapawn.population
-        if old_leader:
-            try:
-                leader_pos = population.index(old_leader)
-                new_leader = population[(leader_pos + 1) % len(population)]
-            except ValueError:
-                old_leader = None
-        if not old_leader and population:
-            new_leader = random.choice(population)
+    def cycle_leader():
+        popn = Datapawn.population
+        if popn:
+            popn.append(popn.pop(0))
 
-        if new_leader:
-            new_leader.selected = True  # maybe add a leader component or something?
-        Datapawn.selected_leader = new_leader
+
+class SpiritOfTheDrums(Component):
+    """
+    Handles high-level commands on the entire population of Datapawns that can't be
+    done easily on an individual basis
+    """
+
+    def on_drum_command(self, command):
+        # resolve scope
+        if command[0] != "D":
+            return
+        action = command[1:]
+        if action == "D01":
+            Datapawn.cycle_leader()
