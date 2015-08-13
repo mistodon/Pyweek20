@@ -2,7 +2,6 @@ from __future__ import print_function, unicode_literals
 
 import pyglet
 from .vec import vec2
-import random
 
 
 class Entity:
@@ -27,7 +26,7 @@ class Component():
 
 class Drawable(Component):
     def __init__(self, image, batch=None):
-        super().__init__()
+        super(Drawable, self).__init__()
         img = pyglet.resource.image(image)
         self.sprite = pyglet.sprite.Sprite(img, batch=batch)
 
@@ -40,7 +39,7 @@ class Datapawn(Component):
     population = []     # leader is population[0]
 
     def __init__(self):
-        super().__init__()
+        super(Datapawn, self).__init__()
         self.dest = None
         self.emplaced = False
         Datapawn.population.append(self)
@@ -85,7 +84,6 @@ class SpiritOfTheDrums(Component):
     Handles high-level commands on the entire population of Datapawns that can't be
     done easily on an individual basis
     """
-
     def on_drum_command(self, command):
         # resolve scope
         if command[0] != "D":
@@ -93,3 +91,12 @@ class SpiritOfTheDrums(Component):
         action = command[1:]
         if action == "D01":
             Datapawn.cycle_leader()
+
+
+class DrawableText(Component):
+    def __init__(self, **kwargs):
+        super(DrawableText, self).__init__()
+        self.label = pyglet.text.Label(**kwargs)
+
+    def on_draw(self):
+        self.label.draw()
