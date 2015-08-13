@@ -65,15 +65,35 @@ class Camera(Component):
 
 
 class Drawable(Component):
-    def __init__(self, image, batch=None):
+    layers = {}
+
+    def __init__(self, image, batch=None, layer=8, parallax=1.0, loop=None):
         super(Drawable, self).__init__()
         img = pyglet.resource.image(image)
-        self.sprite = pyglet.sprite.Sprite(img, batch=batch, subpixel=True)
+        self.sprite = pyglet.sprite.Sprite(
+            img, batch=batch, group=Drawable.get_layer(layer), subpixel=True)
+        self.parallax = parallax
+        self.loop = loop
 
     def on_tick(self, dt):
-        self.sprite.position = self.entity.pos + Camera.active.offset
+        drawpos = self.entity.pos + (Camera.active.offset*self.parallax)
+        if self.loop:
+            x,y = drawpos
+            while x < -200:
+                x += self.loop
+            while x > 800:
+                x -= self.loop
+            drawpos = vec2(x,y)
+        self.sprite.position = drawpos
         self.sprite.rotation = self.entity.rot
 
+    @classmethod
+    def get_layer(cls, index):
+        if index in cls.layers:
+            return cls.layers[index]
+        layer = pyglet.graphics.OrderedGroup(index)
+        cls.layers[index] = layer
+        return layer
 
 class Datapawn(Component):
     population = []     # leader is population[0]
@@ -96,7 +116,9 @@ class Datapawn(Component):
 
     def on_drum_command(self, command):
         # resolve scope
-        if command[0] == "1" and not self.is_the_leader:
+        cmd0 = command[0]
+        leader = self.is_the_leader
+        if (cmd0 == "1" and not leader) or (cmd0 == "0" and leader):
             return
         # act on command if scope includes me
         action = command[1:]

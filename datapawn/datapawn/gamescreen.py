@@ -4,10 +4,11 @@ import pyglet
 import pyglet.gl as gl
 from pyglet.window import key
 
-from math import fmod
+from math import fmod, floor
 
 from .entity import Entity, Drawable, Datapawn, SpiritOfTheDrums, Camera, DrawableText
 from .music import BeatClock
+from . import prefabs
 
 CONTROLS = {
     key.UP: "D",
@@ -21,36 +22,34 @@ class GameScreen(pyglet.window.Window):
     GROUND_Y = 100
 
     def __init__(self):
-        super(GameScreen, self).__init__(800, 450)
+        super(GameScreen, self).__init__(800, 450, caption="Datapawn")
         gl.glClearColor(0.5,0.85,1.0,1.0)
-        self.batch = pyglet.graphics.Batch()
+        self.batch = batch = pyglet.graphics.Batch()
         self.named_entities = {}
         self.clock = 0.0
         self.frames = 0
 
-        def robot(x):
-            return Entity(self, (x, self.GROUND_Y), components=[
-                Drawable(image="datapawn.png", batch=self.batch),
-                Datapawn()
-                ])
-
         self.entities = [
             Entity(self, (400, 225), components=[Camera()]),
-            robot(10),
-            robot(40),
-            robot(50),
-            robot(80),
+            prefabs.robot(self, 10, self.GROUND_Y, batch),
+            prefabs.robot(self, 40, self.GROUND_Y, batch),
+            prefabs.robot(self, 50, self.GROUND_Y, batch),
+            prefabs.robot(self, 80, self.GROUND_Y, batch),
             Entity(self, (0,0), name="Spirit of the Drums", components=[SpiritOfTheDrums()]),
             Entity(self, (200, 200), name="Ground Text", components=[
                 DrawableText(world=True, x=200, y=200, text="This is a test", font_size=80)
-            ])
+            ]),
+            prefabs.scenery(self, 300, self.GROUND_Y, batch, "bigtree.png", 7, loop=300*5),
+            prefabs.scenery(self, 400, self.GROUND_Y, batch, "weetree.png", 6, 0.75, loop=300*7),
+            prefabs.scenery(self, 700, self.GROUND_Y, batch, "bigtree.png", 7, loop=300*11),
+            prefabs.scenery(self, 900, self.GROUND_Y, batch, "weetree.png", 6, 0.75, loop=300*13),
             ]
         for e in self.entities:
             if e.name:
                 self.named_entities[e.name] = e
 
         pyglet.clock.schedule_interval(self.tick, 1.0/60.0)
-        self.command = []
+        self.command = ["*","*","*","*"]
         self.beatclock = BeatClock()
         self.beatclock.start()
         self.dispatch_event("on_start")
@@ -59,18 +58,12 @@ class GameScreen(pyglet.window.Window):
         super(GameScreen, self).on_key_press(symbol, modifiers)
         sym = CONTROLS.get(symbol)
         if sym:
-            beat,error = self.beatclock.get_beat()
-            status = "Good!"
-            if error < -0.12:
-                status = "Too Fast"
-            elif error > 0.12:
-                status = "Too Slow"
-            #print("{0}  {1}".format(error, status))
-            self.command.append(sym)
-            if len(self.command) == 4:
+            beat = self.current_beat(rounds=True)
+            self.command[beat] = sym
+            if beat == 3:
                 self.dispatch_event("on_drum_command", ''.join(self.command))
                 print(self.command)
-                self.command = []
+                self.command = ["*","*","*","*"]
 
     def tick(self, dt):
         self.clock += dt
@@ -108,9 +101,9 @@ class GameScreen(pyglet.window.Window):
     def draw_beat(self):
         blength = self.beatclock.beat_length
         error = fmod(self.clock, blength) / blength
-        beat = self.current_beat
-        bar = self.current_bar
-        playable = self.this_bar_playable
+        beat = self.current_beat()
+        bar = self.current_bar()
+        playable = self.this_bar_playable()
 
         if bar < 2:
             return
@@ -136,20 +129,19 @@ class GameScreen(pyglet.window.Window):
         print(message)
         pyglet.app.quit()
 
-    @property
-    def current_beat(self):
-        return int(self.clock / self.beatclock.beat_length) % self.beatclock.beats_per_bar
+    def current_beat(self, rounds=False):
+        f = round if rounds else floor
+        return f(self.clock / self.beatclock.beat_length) % self.beatclock.beats_per_bar
 
-    @property
-    def current_bar(self):
-        return int(self.clock / self.beatclock.bar_length)
+    def current_bar(self, rounds=False):
+        f = round if rounds else floor
+        return f(self.clock / self.beatclock.bar_length)
 
-    @property
-    def this_bar_playable(self):
-        bar = self.current_bar
+    def this_bar_playable(self, rounds=False):
+        bar = self.current_bar(rounds=rounds)
         if bar < 3:
             return False
-        return (self.current_bar % 2) == 1
+        return (bar % 2) == 1
 
 GameScreen.register_event_type("on_tick")
 GameScreen.register_event_type("on_start")
