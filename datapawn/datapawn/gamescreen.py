@@ -6,7 +6,7 @@ from pyglet.window import key
 
 from math import fmod
 
-from .entity import Entity, Drawable, Datapawn, SpiritOfTheDrums
+from .entity import Entity, Drawable, Datapawn, SpiritOfTheDrums, Camera
 from .music import BeatClock
 
 CONTROLS = {
@@ -25,12 +25,21 @@ class GameScreen(pyglet.window.Window):
         gl.glClearColor(0.5,0.85,1.0,1.0)
         self.batch = pyglet.graphics.Batch()
         self.named_entities = {}
+        self.clock = 0.0
+        self.frames = 0
 
-        self.entities = [
-            Entity(self, (10, self.GROUND_Y), name="Robot0", components=[
+        def robot(x):
+            return Entity(self, (x, self.GROUND_Y), components=[
                 Drawable(image="datapawn.png", batch=self.batch),
                 Datapawn()
-                ]),
+                ])
+
+        self.entities = [
+            Entity(self, (400, 225), components=[Camera()]),
+            robot(10),
+            robot(40),
+            robot(50),
+            robot(80),
             Entity(self, (0,0), name="Spirit of the Drums", components=[SpiritOfTheDrums()]),
             ]
         for e in self.entities:
@@ -41,6 +50,7 @@ class GameScreen(pyglet.window.Window):
         self.command = []
         self.beatclock = BeatClock()
         self.beatclock.start()
+        self.dispatch_event("on_start")
 
     def on_key_press(self, symbol, modifiers):
         super().on_key_press(symbol, modifiers)
@@ -52,18 +62,19 @@ class GameScreen(pyglet.window.Window):
                 status = "Too Fast"
             elif error > 0.12:
                 status = "Too Slow"
-            print("{0}  {1}".format(error, status))
+            #print("{0}  {1}".format(error, status))
             self.command.append(sym)
             if len(self.command) == 4:
                 self.dispatch_event("on_drum_command", ''.join(self.command))
+                print(self.command)
                 self.command = []
 
     def tick(self, dt):
+        self.clock += dt
+        if self.frames == 10:
+            self.clock = self.beatclock.player.time
+        self.frames += 1
         self.dispatch_event("on_tick", dt)
-        robot0 = self.named_entities["Robot0"]
-        if robot0.pos[0] > 750:
-            print("Victory!")
-            pyglet.app.exit()
 
     def on_draw(self):
         self.clear()
@@ -92,17 +103,30 @@ class GameScreen(pyglet.window.Window):
             ("v2f", groundstrip), ("c3f", colors))
 
     def draw_beat(self):
-        beat,error = self.beatclock.get_beat(round_down=True)
-        b = 10 - 15*error
+        if (self.frames < 11):
+            return
+
+        blength = self.beatclock.beat_length
+        error = fmod(self.clock, blength) / blength
+        beat = int(self.clock / blength)
+        bar = self.clock / self.beatclock.bar_length
+        playable = (bar % 2) == 1
+
+        b = 10 - 8*error
         vertices = (
             0, 0,   b, b,   0, 450,   b, 450-b,
             800, 450,   800-b, 450-b,
             800, 0,   800-b, b,   0, 0,   b, b
             )
-        colors = (1,1,1)*10
+        colors = (0.8,1,0.8)*10
         pyglet.graphics.draw(10, pyglet.gl.GL_QUAD_STRIP,
             ("v2f", vertices), ("c3f", colors))
 
+    def end_game(self, message="Victory!"):
+        print(message)
+        pyglet.app.quit()
+
 
 GameScreen.register_event_type("on_tick")
+GameScreen.register_event_type("on_start")
 GameScreen.register_event_type("on_drum_command")

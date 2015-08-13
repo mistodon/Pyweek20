@@ -3,7 +3,7 @@ import pyglet
 from math import floor
 
 # Change this to some music you actually have.
-TRACK = "moonlight.mp3"
+TRACK = "Smashdance.wav"
 
 class MusicPlayer:
     def __init__(self, filename):
@@ -13,6 +13,7 @@ class MusicPlayer:
     def play(self):
         self.music = pyglet.resource.media(self.filename, streaming=True)
         self.player.queue(self.music)
+        self.player.eos_action = pyglet.media.Player.EOS_LOOP
         self.player.play()
 
     @property
