@@ -41,6 +41,8 @@ class GameScreen(pyglet.window.Window):
             prefabs.scenery(self, 400, self.GROUND_Y, batch, "weetree.png", 6, 0.75, loop=300*7),
             prefabs.scenery(self, 700, self.GROUND_Y, batch, "bigtree.png", 7, loop=300*11),
             prefabs.scenery(self, 900, self.GROUND_Y, batch, "weetree.png", 6, 0.75, loop=300*13),
+            prefabs.scenery(self, 40, 300, batch, "moon.png", 2, 0.0),
+            prefabs.moonlight(self, -200, self.GROUND_Y, batch)
             ]
         for e in self.entities:
             if e.name:

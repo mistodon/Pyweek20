@@ -33,7 +33,7 @@ class Component(object):
 
 class Camera(Component):
     active = None
-    leftmargin = 100
+    leftmargin = -45
 
     def __init__(self):
         super(Camera, self).__init__()
@@ -112,7 +112,8 @@ class Datapawn(Component):
         Datapawn.population.append(self)
 
     def on_start(self):
-        Camera.active.add_focus(self.entity)
+        #Camera.active.add_focus(self.entity)
+        pass
 
     def on_drum_command(self, command):
         # resolve scope
@@ -189,3 +190,17 @@ class DrawableText(Component):
         if self.world:
             self.label.x = self.x + Camera.active.offset.x
         self.label.draw()
+
+
+class Moonlight(Component):
+    def __init__(self):
+        super(Moonlight, self).__init__()
+        self.speed = 5.0
+
+    def on_start(self):
+        Camera.active.add_focus(self.entity)
+
+    def on_tick(self, dt):
+        x,y = self.entity.pos
+        x += self.speed *  dt
+        self.entity.pos = vec2(x,y)

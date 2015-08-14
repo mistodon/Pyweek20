@@ -21,3 +21,9 @@ def ground_text(window, x, batch, text, font_scale=0.9, font_name="Courier"):
                      y=y, batch=batch,
                      anchor_x='center', anchor_y='center')
     return Entity(window, (x, y), components=[d])
+
+def moonlight(window, x, y, batch):
+    return Entity(window, (x, y), components=[
+        Drawable("moonlight.png", batch, layer=9),
+        Moonlight()
+        ])
