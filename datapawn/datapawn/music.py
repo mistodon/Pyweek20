@@ -11,10 +11,13 @@ class MusicPlayer:
         self.player = pyglet.media.Player()
 
     def play(self):
-        self.music = pyglet.resource.media(self.filename, streaming=True)
-        self.player.queue(self.music)
-        self.player.eos_action = pyglet.media.Player.EOS_LOOP
-        self.player.play()
+        try:
+            self.music = pyglet.resource.media(self.filename, streaming=True)
+            self.player.queue(self.music)
+            self.player.eos_action = pyglet.media.Player.EOS_LOOP
+            self.player.play()
+        except pyglet.resource.ResourceNotFoundException:
+            pass
 
     @property
     def time(self):
@@ -34,8 +37,11 @@ class PyGameMusicPlayer:
             self.mixer.init()
 
     def play(self):
-        self.mixer.music.load(self.filename)
-        self.mixer.music.play()
+        try:
+            self.mixer.music.load(self.filename)
+            self.mixer.music.play()
+        except Exception:   # TODO find out which one
+            pass
 
     @property
     def playing(self):

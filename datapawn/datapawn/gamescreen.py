@@ -6,7 +6,7 @@ from pyglet.window import key
 
 from math import fmod, floor
 
-from .entity import Entity, Drawable, Datapawn, SpiritOfTheDrums, Camera, DrawableText
+from .entity import Entity, SpiritOfTheDrums, Camera
 from .music import BeatClock
 from . import prefabs
 
@@ -36,9 +36,7 @@ class GameScreen(pyglet.window.Window):
             prefabs.robot(self, 50, self.GROUND_Y, batch),
             prefabs.robot(self, 80, self.GROUND_Y, batch),
             Entity(self, (0,0), name="Spirit of the Drums", components=[SpiritOfTheDrums()]),
-            Entity(self, (200, 200), name="Ground Text", components=[
-                DrawableText(world=True, x=200, y=200, text="This is a test", font_size=80)
-            ]),
+            prefabs.ground_text(self, 1000, batch, "This is a test"),
             prefabs.scenery(self, 300, self.GROUND_Y, batch, "bigtree.png", 7, loop=300*5),
             prefabs.scenery(self, 400, self.GROUND_Y, batch, "weetree.png", 6, 0.75, loop=300*7),
             prefabs.scenery(self, 700, self.GROUND_Y, batch, "bigtree.png", 7, loop=300*11),
