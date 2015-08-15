@@ -6,7 +6,7 @@ from pyglet.window import key
 
 from math import fmod, floor
 
-from .entity import Entity, SpiritOfTheDrums, Camera
+from .entity import Entity, SpiritOfTheDrums, Camera, Datapawn
 from .music import BeatClock
 from . import prefabs
 
@@ -31,18 +31,19 @@ class GameScreen(pyglet.window.Window):
 
         self.entities = [
             Entity(self, (400, 225), components=[Camera()]),
-            prefabs.robot(self, 10, self.GROUND_Y, batch),
-            prefabs.robot(self, 40, self.GROUND_Y, batch),
-            prefabs.robot(self, 50, self.GROUND_Y, batch),
-            prefabs.robot(self, 80, self.GROUND_Y, batch),
             Entity(self, (0,0), name="Spirit of the Drums", components=[SpiritOfTheDrums()]),
+            prefabs.moonlight(self, -200, self.GROUND_Y, batch),
+            prefabs.robot(self, 60, self.GROUND_Y, batch),
+            prefabs.robot(self, 90, self.GROUND_Y, batch),
+            prefabs.robot(self, 100, self.GROUND_Y, batch),
+            prefabs.robot(self, 130, self.GROUND_Y, batch),
+            prefabs.obstacle(self, 500, self.GROUND_Y, batch, "block.png", 76, 76),
             prefabs.ground_text(self, 1000, batch, "This is a test"),
-            prefabs.scenery(self, 300, self.GROUND_Y, batch, "bigtree.png", 7, loop=300*5),
-            prefabs.scenery(self, 400, self.GROUND_Y, batch, "weetree.png", 6, 0.75, loop=300*7),
-            prefabs.scenery(self, 700, self.GROUND_Y, batch, "bigtree.png", 7, loop=300*11),
-            prefabs.scenery(self, 900, self.GROUND_Y, batch, "weetree.png", 6, 0.75, loop=300*13),
+            prefabs.scenery(self, 300, self.GROUND_Y, batch, "bigtree.png", 6, loop=300*5),
+            prefabs.scenery(self, 400, self.GROUND_Y, batch, "weetree.png", 5, 0.75, loop=300*7),
+            prefabs.scenery(self, 700, self.GROUND_Y, batch, "bigtree.png", 6, loop=300*11),
+            prefabs.scenery(self, 900, self.GROUND_Y, batch, "weetree.png", 5, 0.75, loop=300*13),
             prefabs.scenery(self, 40, 300, batch, "moon.png", 2, 0.0),
-            prefabs.moonlight(self, -200, self.GROUND_Y, batch)
             ]
         for e in self.entities:
             if e.name:
@@ -70,7 +71,20 @@ class GameScreen(pyglet.window.Window):
         if self.frames % 60 == 0:
             self.clock = self.beatclock.player.time
         self.frames += 1
+        self.clean_out_your_dead()
         self.dispatch_event("on_tick", dt)
+        if len(Datapawn.population) == 0:
+            self.end_game("Game over...")
+
+    def clean_out_your_dead(self):
+        deads = []
+        for e in self.entities:
+            if e.dead:
+                for c in e.components.values():
+                    c.on_die()
+                deads.append(e)
+        for e in deads:
+            self.entities.remove(e)
 
     def on_draw(self):
         self.clear()
@@ -119,7 +133,7 @@ class GameScreen(pyglet.window.Window):
         if playable:
             colors = (1,1,1)*10
         elif beat == self.beatclock.beats_per_bar - 1 and bar >= 2:
-            colors = (1.0,1.0,0.8)*10
+            colors = (1.0,1.0,0.4)*10
         else:
             colors = (0.6,0.6,0.6)*10
         pyglet.graphics.draw(10, pyglet.gl.GL_QUAD_STRIP,
@@ -127,7 +141,7 @@ class GameScreen(pyglet.window.Window):
 
     def end_game(self, message="Victory!"):
         print(message)
-        pyglet.app.quit()
+        pyglet.app.exit()
 
     def current_beat(self, rounds=False):
         f = round if rounds else floor

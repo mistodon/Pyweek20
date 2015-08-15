@@ -1,17 +1,24 @@
 from .entity import *
-
+from .collision import *
+from .constants import MASK
 
 def robot(window, x, y, batch):
     return Entity(window, (x, window.GROUND_Y), components=[
         Drawable(image="datapawn.png", batch=batch),
+        RectCollider(24, 64, layermask=MASK["robot"]),
         Datapawn()
         ])
 
-
-def scenery(window, x, y, batch, image, layer=8, parallax=1.0, loop=None):
+def scenery(window, x, y, batch, image, layer=6, parallax=1.0, loop=None):
     d = Drawable(image=image, batch=batch, layer=layer,
                  parallax=parallax, loop=loop)
     return Entity(window, (x, y), components=[d])
+
+def obstacle(window, x, y, batch, image, width, height, layer=7, hp=4):
+    return Entity(window, (x, y), components=[
+        Drawable(image=image, batch=batch, layer=layer),
+        RectCollider(width, height, layermask=MASK["obstacle"]),
+        Obstacle(hp)])
 
 
 def ground_text(window, x, batch, text, font_scale=0.9, font_name="Courier"):

@@ -22,6 +22,14 @@ class vec2(namedtuple("vec2", ["x","y"])):
     def dot(self, other):
         return self.x*other.x + self.y*other.y
 
+    def proj_coefficient(self, other):
+        if other.is_zero:
+            return 0
+        return self.dot(other) / other.dot(other)
+
+    def proj(self, other):
+        return other * self.proj_coefficient(other)
+
     @property
     def magSq(self):
         return self.dot(self)
@@ -32,7 +40,14 @@ class vec2(namedtuple("vec2", ["x","y"])):
 
     @property
     def normalized(self):
+        if self.is_zero:
+            return vec2(0,0)
         return self / self.mag
+
+    @property
+    def is_zero(self):
+        return self.x == self.y == 0
+    
     
     @staticmethod
     def zero():
