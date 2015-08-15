@@ -82,6 +82,7 @@ class GameScreen(pyglet.window.Window):
             self.drumsfx[sym].play()
             if beat == 3:
                 self.dispatch_event("on_drum_command", ''.join(self.command))
+                self.command = ["*", "*", "*", "*"]
 
     def tick(self, dt):
         if self.ended:
@@ -91,8 +92,6 @@ class GameScreen(pyglet.window.Window):
             self.clock = self.beatclock.player.time
         self.frames += 1
         beat = self.current_beat(rounds=True)
-        if self.last_beat > 0 and beat == 0:
-            self.command = ["*","*","*","*"]
         self.clean_out_your_dead()
         self.dispatch_event("on_tick", dt)
         if len(Datapawn.population) == 0:

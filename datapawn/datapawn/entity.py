@@ -164,8 +164,10 @@ class Datapawn(Component):
         # resolve scope
         cmd0 = command[0]
         leader = self.is_the_leader
+        print(leader)
         if (cmd0 == "1" and not leader) or (cmd0 == "0" and leader):
             return
+        print(cmd0, leader)
         # act on command if scope includes me
         action = command[1:3]
         target = command[3]
