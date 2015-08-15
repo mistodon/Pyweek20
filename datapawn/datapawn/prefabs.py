@@ -18,7 +18,7 @@ def obstacle(window, x, y, batch, image, width, height, layer=7, hp=4):
     return Entity(window, (x, y), components=[
         Drawable(image=image, batch=batch, layer=layer),
         RectCollider(width, height, layermask=MASK["obstacle"]),
-        Obstacle(hp)])
+        Obstacle(hp, {"hit": "hit.wav", "die": "crumble.wav"})])
 
 
 def ground_text(window, x, batch, text, font_scale=0.9, font_name="Courier"):
