@@ -1,8 +1,8 @@
 from __future__ import print_function, unicode_literals
 
 import pyglet
-import pyglet.gl as gl
 from pyglet.window import key
+import pyglet.gl as gl
 
 from math import fmod, floor
 
@@ -21,7 +21,7 @@ CONTROLS = {
 class GameScreen(pyglet.window.Window):
     GROUND_Y = 100
 
-    def __init__(self):
+    def __init__(self, pygame=False):
         super(GameScreen, self).__init__(800, 450, caption="Datapawn")
         gl.glClearColor(0.5,0.85,1.0,1.0)
         self.batch = batch = pyglet.graphics.Batch()
@@ -51,7 +51,7 @@ class GameScreen(pyglet.window.Window):
 
         pyglet.clock.schedule_interval(self.tick, 1.0/60.0)
         self.command = ["*","*","*","*"]
-        self.beatclock = BeatClock()
+        self.beatclock = BeatClock(pygame=pygame)
         self.beatclock.start()
         self.dispatch_event("on_start")
 
@@ -145,7 +145,7 @@ class GameScreen(pyglet.window.Window):
 
     def current_beat(self, rounds=False):
         f = round if rounds else floor
-        return f(self.clock / self.beatclock.beat_length) % self.beatclock.beats_per_bar
+        return int(f(self.clock / self.beatclock.beat_length) % self.beatclock.beats_per_bar)
 
     def current_bar(self, rounds=False):
         f = round if rounds else floor

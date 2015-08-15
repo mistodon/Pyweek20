@@ -1,9 +1,10 @@
+import os
 import pyglet
 
 from math import floor
 
 # Change this to some music you actually have.
-TRACK = "Smashdance.wav"
+TRACK = "SevenNationArmy.mp3"
 
 class MusicPlayer:
     def __init__(self, filename):
@@ -11,13 +12,10 @@ class MusicPlayer:
         self.player = pyglet.media.Player()
 
     def play(self):
-        try:
-            self.music = pyglet.resource.media(self.filename, streaming=True)
-            self.player.queue(self.music)
-            self.player.eos_action = pyglet.media.Player.EOS_LOOP
-            self.player.play()
-        except pyglet.resource.ResourceNotFoundException:
-            pass
+        self.music = pyglet.resource.media(self.filename, streaming=True)
+        self.player.queue(self.music)
+        self.player.eos_action = pyglet.media.Player.EOS_LOOP
+        self.player.play()
 
     @property
     def time(self):
@@ -30,18 +28,16 @@ class MusicPlayer:
 
 class PyGameMusicPlayer:
     def __init__(self, filename):
-        self.filename = filename
+        self.filename = os.path.join(pyglet.resource.location(filename).path, filename)
+        print(self.filename)
         import pygame
         self.mixer = pygame.mixer
         if not self.mixer.get_init():
             self.mixer.init()
 
     def play(self):
-        try:
-            self.mixer.music.load(self.filename)
-            self.mixer.music.play()
-        except Exception:   # TODO find out which one
-            pass
+        self.mixer.music.load(self.filename)
+        self.mixer.music.play()
 
     @property
     def playing(self):

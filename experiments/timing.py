@@ -6,11 +6,8 @@ from __future__ import print_function, unicode_literals
 
 import argparse
 
-from .monkey import patch
-
+from datapawn.datapawn.monkey import patch
 import pyglet
-import time
-
 
 patch()
 
