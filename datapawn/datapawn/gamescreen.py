@@ -28,6 +28,7 @@ class GameScreen(pyglet.window.Window):
         self.named_entities = {}
         self.clock = 0.0
         self.frames = 0
+        self.ended = False
 
         drumsfx = [
             ("D", "header_burst.mp3"),
@@ -67,6 +68,8 @@ class GameScreen(pyglet.window.Window):
 
     def on_key_press(self, symbol, modifiers):
         super(GameScreen, self).on_key_press(symbol, modifiers)
+        if self.ended:
+            return
         sym = CONTROLS.get(symbol)
         if sym:
             beat = self.current_beat(rounds=True)
@@ -76,6 +79,8 @@ class GameScreen(pyglet.window.Window):
                 self.dispatch_event("on_drum_command", ''.join(self.command))
 
     def tick(self, dt):
+        if self.ended:
+            return
         self.clock += dt
         if self.frames % 60 == 0:
             self.clock = self.beatclock.player.time
@@ -155,7 +160,8 @@ class GameScreen(pyglet.window.Window):
 
     def end_game(self, message="Victory!"):
         print(message)
-        pyglet.app.exit()
+        self.entities.append(prefabs.sky_text(self, self.width // 2, self.height // 2, self.batch, message, 80))
+        self.ended = True
 
     def current_beat(self, rounds=False):
         f = round if rounds else floor
