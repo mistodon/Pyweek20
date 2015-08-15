@@ -29,6 +29,14 @@ class GameScreen(pyglet.window.Window):
         self.clock = 0.0
         self.frames = 0
 
+        drumsfx = [
+            ("D", "header_burst.mp3"),
+            ("0", "zero2.wav"),
+            ("1", "one2.wav"),
+            ("-", "minus2.wav")]
+        self.drumsfx = {sym: pyglet.resource.media(f, streaming=False)
+                        for sym, f in drumsfx}
+
         self.entities = [
             Entity(self, (400, 225), components=[Camera()]),
             Entity(self, (0,0), name="Spirit of the Drums", components=[SpiritOfTheDrums()]),
@@ -51,6 +59,7 @@ class GameScreen(pyglet.window.Window):
 
         pyglet.clock.schedule_interval(self.tick, 1.0/60.0)
         self.command = ["*","*","*","*"]
+        self.last_beat = 4
         self.beatclock = BeatClock(pygame=pygame)
         self.beatclock.start()
         self.dispatch_event("on_start")
@@ -61,16 +70,18 @@ class GameScreen(pyglet.window.Window):
         if sym:
             beat = self.current_beat(rounds=True)
             self.command[beat] = sym
+            self.drumsfx[sym].play()
             if beat == 3:
                 self.dispatch_event("on_drum_command", ''.join(self.command))
-                print(self.command)
-                self.command = ["*","*","*","*"]
 
     def tick(self, dt):
         self.clock += dt
         if self.frames % 60 == 0:
             self.clock = self.beatclock.player.time
         self.frames += 1
+        beat = self.current_beat(rounds=True)
+        if self.last_beat > 0 and beat == 0:
+            self.command = ["*","*","*","*"]
         self.clean_out_your_dead()
         self.dispatch_event("on_tick", dt)
         if len(Datapawn.population) == 0:

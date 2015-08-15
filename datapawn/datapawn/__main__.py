@@ -7,7 +7,7 @@ def main():
     add = ap.add_argument
     add("--pygame-audio", action="store_true", default=False)
     args = ap.parse_args()
-    pyglet.resource.path = ["data", "data/images", "data/experiments"]
+    pyglet.resource.path = ["data", "data/images", "data/experiments", "data/sfx"]
     pyglet.resource.reindex()
 
     from .gamescreen import GameScreen
