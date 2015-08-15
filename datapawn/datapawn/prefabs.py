@@ -14,11 +14,11 @@ def scenery(window, x, y, batch, image, layer=6, parallax=1.0, loop=None):
                  parallax=parallax, loop=loop)
     return Entity(window, (x, y), components=[d])
 
-def obstacle(window, x, y, batch, image, width, height, layer=7, hp=4):
+def obstacle(window, x, y, batch, image, width, height, layer=7, hp=4, victory=False):
     return Entity(window, (x, y), components=[
         Drawable(image=image, batch=batch, layer=layer),
         RectCollider(width, height, layermask=MASK["obstacle"]),
-        Obstacle(hp, {"hit": "hit.wav", "die": "crumble.wav"})])
+        Obstacle(hp, {"hit": "hit.wav", "die": "crumble.wav"}, victory=victory)])
 
 
 def ground_text(window, x, batch, text, font_scale=0.9, font_name="Courier"):

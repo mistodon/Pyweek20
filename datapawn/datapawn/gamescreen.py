@@ -6,7 +6,7 @@ import pyglet.gl as gl
 
 from math import fmod, floor
 
-from .entity import Entity, SpiritOfTheDrums, Camera, Datapawn
+from .entity import Entity, SpiritOfTheDrums, Camera, Datapawn, Obstacle
 from .music import BeatClock
 from . import prefabs
 
@@ -52,6 +52,7 @@ class GameScreen(pyglet.window.Window):
             prefabs.scenery(self, 700, self.GROUND_Y, batch, "bigtree.png", 6, loop=300*11),
             prefabs.scenery(self, 900, self.GROUND_Y, batch, "weetree.png", 5, 0.75, loop=300*13),
             prefabs.scenery(self, 40, 300, batch, "moon.png", 2, 0.0),
+            prefabs.obstacle(self, 1500, self.GROUND_Y, batch, "goldblock.png", 76, 76, hp=5, victory=True)
             ]
         for e in self.entities:
             if e.name:
@@ -93,6 +94,8 @@ class GameScreen(pyglet.window.Window):
             if e.dead:
                 for c in e.components.values():
                     c.on_die()
+                    if isinstance(c, Obstacle) and c.victory:
+                        self.end_game("Victory!")
                 deads.append(e)
         for e in deads:
             self.entities.remove(e)

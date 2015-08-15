@@ -227,12 +227,13 @@ class Datapawn(Component):
             popn.append(popn.pop(0))
 
 class Obstacle(Component):
-    def __init__(self, hp, hitsounds={}):
+    def __init__(self, hp, hitsounds={}, victory=False):
         super(Obstacle, self).__init__()
         self.hp = hp
         self.wiggletime = 0.0
         self.hitsounds = {key: pyglet.resource.media(f, streaming=False)
                           for key,f in hitsounds.items()}
+        self.victory = victory
 
     def on_start(self):
         self.basepos = self.entity.pos
@@ -262,6 +263,7 @@ class Obstacle(Component):
         s = self.hitsounds.get("die")
         if s:
             s.play()
+
 
 class SpiritOfTheDrums(Component):
     """
