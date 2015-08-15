@@ -1,5 +1,5 @@
-Datapawns
-===============
+Datapawn
+========
 
 Entry in PyWeek #20  <http://www.pyweek.org/20/>
 URL: https://pyweek.org/e/brunch_massacre/
@@ -23,13 +23,38 @@ The error will be intermittent, and it should work after a few tries.
 
 Sorry about that. Would have monkey-patched it, but can't even import the module when it happens.
 
+Quick Notes
+-----------
+We spent a lot less time on this than we would have liked to, so it's more of a demo than a game.
+
 
 How to Play the Game
 --------------------
 
-The Datapawns are led across the wasteland on a mission
+The Datapawns traverse the junkyard, fleeing the wicked light of the Magenta Moon.
 
-They are controlled by issuing rhythmic commands.
+Hit the arrow keys in time with the music to send commands to the Datapawns.
+
+The commands are made of four symbols, where each symbol is one of:
+
+1.  Up:     "Data" (or "D")
+2.  Right:  "1"
+3.  Down:   "0"
+4.  Left:   "-"
+
+The commands you will need are:
+
+### Commands
+Everybody move right:   D, D, D, 1
+Everybody move left:    D, D, D, -
+Everybody attack:       D, D, -, 1
+
+When the frame of the screen pulses white, that's when you should hit the keys. When it pulses grey, just wait. When it pulses yellow, get ready because the next beat will be white again.
+
+If for some reason you want to explore the mechanic we never got around to using, you can change the first symbol of any command to "1" or "0".
+
+Changing it to a "1" sends the command only to the leader.
+Changing it to a "0" sends the command to everyone except the leader.
 
 
 Development notes 
