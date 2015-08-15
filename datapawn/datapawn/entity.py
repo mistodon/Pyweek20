@@ -251,11 +251,11 @@ class Obstacle(Component):
                 robot = collider.test_overlap(
                     mask=MASK["robot"], displacement=vec2(-5, 0))
                 pawn = robot.entity["Datapawn"] if robot else None
-                if pawn and pawn.attacking:
+                if pawn and pawn.attacking and self.hp > 0:
                     s = self.hitsounds.get("hit")
                     if s: s.play()
                     self.hp -= 1
-                    self.wiggletime = 0.25
+                    self.wiggletime = 0.35
             if self.hp <= 0:
                 self.entity.die()
 
@@ -277,6 +277,20 @@ class SpiritOfTheDrums(Component):
         action = command[1:]
         if action == "D01":
             Datapawn.cycle_leader()
+
+class DrumButton(Component):
+    def __init__(self, key):
+        super(DrumButton, self).__init__()
+        self.key = key
+        self.alpha = 0
+
+    def on_key_press(self, symbol, modifiers):
+        if symbol == self.key:
+            self.alpha = 1.0
+
+    def on_tick(self, dt):
+        self.alpha = max(0, self.alpha - dt*3)
+        self.entity["Drawable"].sprite.opacity = self.alpha*255
 
 class Moonlight(SingletonComponent):
     def __init__(self):

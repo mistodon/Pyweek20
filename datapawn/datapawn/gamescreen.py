@@ -32,9 +32,9 @@ class GameScreen(pyglet.window.Window):
 
         drumsfx = [
             ("D", "header_burst.mp3"),
-            ("0", "zero2.wav"),
-            ("1", "one2.wav"),
-            ("-", "minus2.wav")]
+            ("0", "zero.wav"),
+            ("1", "one.wav"),
+            ("-", "minus.wav")]
         self.drumsfx = {sym: pyglet.resource.media(f, streaming=False)
                         for sym, f in drumsfx}
 
@@ -47,13 +47,18 @@ class GameScreen(pyglet.window.Window):
             prefabs.robot(self, 100, self.GROUND_Y, batch),
             prefabs.robot(self, 130, self.GROUND_Y, batch),
             prefabs.obstacle(self, 500, self.GROUND_Y, batch, "block.png", 76, 76),
-            prefabs.ground_text(self, 1000, batch, "This is a test"),
+            prefabs.obstacle(self, 1100, self.GROUND_Y, batch, "block.png", 76, 76),
+            prefabs.obstacle(self, 1180, self.GROUND_Y, batch, "ball.png", 76, 76, hp=6),
             prefabs.scenery(self, 300, self.GROUND_Y, batch, "bigtree.png", 6, loop=300*5),
             prefabs.scenery(self, 400, self.GROUND_Y, batch, "weetree.png", 5, 0.75, loop=300*7),
             prefabs.scenery(self, 700, self.GROUND_Y, batch, "bigtree.png", 6, loop=300*11),
             prefabs.scenery(self, 900, self.GROUND_Y, batch, "weetree.png", 5, 0.75, loop=300*13),
             prefabs.scenery(self, 40, 300, batch, "moon.png", 2, 0.0),
-            prefabs.obstacle(self, 1500, self.GROUND_Y, batch, "goldblock.png", 76, 76, hp=5, victory=True)
+            prefabs.button(self, 0, 175, batch, "minus-button.png", key.LEFT),
+            prefabs.button(self, 700, 175, batch, "one-button.png", key.RIGHT),
+            prefabs.button(self, 350, 350, batch, "data-button.png", key.UP),
+            prefabs.button(self, 350, 0, batch, "zero-button.png", key.DOWN),
+            prefabs.obstacle(self, 1500, self.GROUND_Y, batch, "goldblock.png", 76, 76, hp=10, victory=True)
             ]
         for e in self.entities:
             if e.name:

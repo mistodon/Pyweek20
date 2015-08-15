@@ -14,6 +14,12 @@ def scenery(window, x, y, batch, image, layer=6, parallax=1.0, loop=None):
                  parallax=parallax, loop=loop)
     return Entity(window, (x, y), components=[d])
 
+def button(window, x, y, batch, image, key):
+    return Entity(window, (x, y), components=[
+        Drawable(image=image, batch=batch, layer=10, parallax=0.0),
+        DrumButton(key)
+        ])
+
 def obstacle(window, x, y, batch, image, width, height, layer=7, hp=4, victory=False):
     return Entity(window, (x, y), components=[
         Drawable(image=image, batch=batch, layer=layer),
