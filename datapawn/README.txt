@@ -23,10 +23,6 @@ The error will be intermittent, and it should work after a few tries.
 
 Sorry about that. Would have monkey-patched it, but can't even import the module when it happens.
 
-Quick Notes
------------
-We spent a lot less time on this than we would have liked to, so it's more of a demo than a game.
-
 
 How to Play the Game
 --------------------
@@ -51,7 +47,9 @@ Everybody attack:       D, D, -, 1
 
 When the frame of the screen pulses white, that's when you should hit the keys. When it pulses grey, just wait. When it pulses yellow, get ready because the next beat will be white again.
 
-If for some reason you want to explore the mechanic we never got around to using, you can change the first symbol of any command to "1" or "0".
+This is more of a demo than a full game. We were planning to do a lot with the different commands - 16 different actions, each with 16 variants - but we didn't get a whole lot of time to work on it.
+
+If for some reason you want to explore a mechanic we never got around to using, you can change the first symbol of any command to "1" or "0".
 
 Changing it to a "1" sends the command only to the leader.
 Changing it to a "0" sends the command to everyone except the leader.
